@@ -1,6 +1,9 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Venue Search{% endblock %}
 {% block content %}
+<script>
+	var data = {{ venue | tojson }}
+console.log(data)</script>
 <div class="row">
 	<div class="col-sm-6">
 		<h1 class="monospace">
