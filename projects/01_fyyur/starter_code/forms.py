@@ -1,7 +1,8 @@
 from datetime import datetime
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField
-from wtforms.validators import DataRequired, AnyOf, URL
+from wtforms.validators import DataRequired, AnyOf, Regexp, URL, Optional, ValidationError
+import re
 
 genres = [
     ('Alternative', 'Alternative'),
@@ -79,7 +80,11 @@ states = [
             ('WY', 'WY'),
         ]
 
-class ShowForm(Form):
+class ShowForm(FlaskForm):
+    def validate_phone(form, field):
+        if not re.search(r"^[0-9]{3}-[0-9]{3}-[0-9]{4}$", field.data):
+            raise ValidationError("Phone number is invalid.")
+
     artist_id = StringField(
         'artist_id'
     )
@@ -92,7 +97,17 @@ class ShowForm(Form):
         default= datetime.today()
     )
 
-class VenueForm(Form):
+class VenueForm(FlaskForm):
+    def validate_phone(form, field):
+        if not re.search(r"^[0-9]{3}-[0-9]{3}-[0-9]{4}$", field.data):
+            raise ValidationError("Phone number is invalid.")
+        
+    def validate_genres(form, field):
+        valid_genres = [g[0] for g in genres]
+        for value in field.data:
+            if value not in valid_genres:
+                raise ValidationError("Genre value is invalid.")
+
     name = StringField(
         'name', validators=[DataRequired()]
     )
@@ -100,31 +115,42 @@ class VenueForm(Form):
         'city', validators=[DataRequired()]
     )
     state = SelectField(
-        'state', validators=[DataRequired()],
+        'state', validators=[DataRequired(), AnyOf(list(s[0] for s in states))],
         choices=states
     )
     address = StringField(
         'address', validators=[DataRequired()]
     )
     phone = StringField(
-        'phone'
+        'phone', validators=[DataRequired()]
     )
     image_link = StringField(
-        'image_link'
+        'image_link', validators=[Optional(), URL()]
+    )
+    website = StringField(
+        'image_link', validators=[Optional(), URL()]
     )
     genres = SelectMultipleField(
         'genres', validators=[DataRequired()],
         choices=genres
     )
     facebook_link = StringField(
-        'facebook_link', validators=[URL()]
+        'facebook_link', validators=[Optional(), URL()]
     )
 
-    website = StringField('website')
     seeking_talent = BooleanField('seeking_talent')
     seeking_description = StringField('seeking_description')
 
-class ArtistForm(Form):
+class ArtistForm(FlaskForm):
+    def validate_phone(form, field):
+        if not re.search(r"^[0-9]{3}-[0-9]{3}-[0-9]{4}$", field.data):
+            raise ValidationError("Phone number is invalid.")
+        
+    def validate_genres(form, field):
+        valid_genres = [g[0] for g in genres]
+        for value in field.data:
+            if value not in valid_genres:
+                raise ValidationError("Genre value is invalid.")
     name = StringField(
         'name', validators=[DataRequired()]
     )
@@ -132,24 +158,24 @@ class ArtistForm(Form):
         'city', validators=[DataRequired()]
     )
     state = SelectField(
-        'state', validators=[DataRequired()],
+        'state', validators=[DataRequired(), AnyOf(list(s[0] for s in states))],
         choices=states
     )
     phone = StringField(
-        # TODO implement validation logic for state
-        'phone'
+        'phone', validators=[DataRequired()]
     )
     image_link = StringField(
-        'image_link'
+        'image_link', validators=[Optional(), URL()]
     )
     genres = SelectMultipleField(
-        # TODO implement enum restriction
         'genres', validators=[DataRequired()],
         choices=genres
     )
     facebook_link = StringField(
-        # TODO implement enum restriction
-        'facebook_link', validators=[URL()]
+        'facebook_link', validators=[Optional(), URL()]
     )
 
+    website = StringField('website', validators=[Optional(), URL()])
+    seeking_venue = BooleanField('seeking_venue')
+    seeking_description = StringField('seeking_description')
 # TODO IMPLEMENT NEW ARTIST FORM AND NEW SHOW FORM

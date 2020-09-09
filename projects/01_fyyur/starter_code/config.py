@@ -11,3 +11,5 @@ DEBUG = True
 
 SQLALCHEMY_DATABASE_URI = 'postgres://eduardnix:2wsx3edc@localhost:5432/fyyur'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+WTF_CSRF_SECRET_KEY = '123asdasd9873kjhfksdyf98349df'
+

@@ -1,1 +1,548 @@
 
+2020-09-09 12:39:08,733 INFO: errors [in /mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py:459]
+2020-09-09 12:39:08,768 INFO: errors [in /mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py:459]
+2020-09-09 12:39:08,768 INFO: errors [in /mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py:459]
+2020-09-09 12:39:11,491 ERROR: Exception on /artists/5 [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077988513536
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 227, in show_artist
+    artist = Artist.query.get(artist_id)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:11,491 ERROR: Exception on /artists/5 [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077988513536
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 227, in show_artist
+    artist = Artist.query.get(artist_id)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:14,930 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    for artist in Artist.query.all():
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:14,930 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    for artist in Artist.query.all():
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:55,164 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077968066304
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:55,164 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077968066304
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:56,255 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:39:56,255 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:02,973 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:02,973 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:09,876 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:09,876 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077980059392
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:10,388 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:10,388 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:10,551 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2020-09-09 12:40:10,551 ERROR: Exception on /artists [GET] [in /home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 140077951158016
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/i/Web/fstack/fsnd/FSND/projects/01_fyyur/starter_code/app.py", line 201, in artists
+    'name': artist.name
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3286, in __call__
+    return self.class_(**local_kw)
+  File "/home/eduardnix/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
