@@ -67,26 +67,154 @@ One note before you delve into your tasks: for each endpoint you are expected to
 9. Create error handlers for all expected errors including 400, 404, 422 and 500. 
 
 REVIEW_COMMENT
-```
-This README is missing documentation of your endpoints. Below is an example for your endpoint to get all categories. Please use it as a reference for creating your documentation and resubmit your code. 
 
+```
 Endpoints
-GET '/categories'
-GET ...
-POST ...
-DELETE ...
 
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
-- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs. 
-{'1' : "Science",
-'2' : "Art",
-'3' : "Geography",
-'4' : "History",
-'5' : "Entertainment",
-'6' : "Sports"}
+- Returns: An object with success and categories that contains a object of id: category_string key:value pairs. 
+{
+  "categories": {
+    "1": "Science", 
+    "2": "Art", 
+    "3": "Geography", 
+    "4": "History", 
+    "5": "Entertainment", 
+    "6": "Sports"
+  }, 
+  "success": 1
+}
 
+
+
+GET '/questions'
+- Fetches a list of questions
+- Request Arguments: page=<int>
+- If page is our of bounds, the endpoint will return an empty list of questions.
+- Returns an object:
+{
+  "categories": {
+    "1": "Science", 
+    "2": "Art", 
+    "3": "Geography", 
+    "4": "History", 
+    "5": "Entertainment", 
+    "6": "Sports"
+  }, 
+  "currentCategory": "Science", 
+  "questions": [
+    {
+      "answer": "Apollo 13", 
+      "category": 5, 
+      "difficulty": 4, 
+      "id": 2, 
+      "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"
+    }, 
+    {
+      "answer": "Tom Cruise", 
+      "category": 5, 
+      "difficulty": 4, 
+      "id": 4, 
+      "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"
+    }
+  ], 
+  "success": 1, 
+  "totalQuestions": 10
+}
+
+DELETE /questions/<int:question_id>
+- Deletes a specific question from the database
+- If a question was not found, will throw an "unprocessable" error (422)
+- Returns an object on success
+{
+  "id": 4, 
+  "message": "Question has been deleted", 
+  "success": 1
+}
+
+POST '/questions'
+- Adds a new question under a specific category
+- Request body:
+    - question: string,
+    - category: int,
+    - answer: string,
+    - difficutly: int
+- If category is not found, or question/answer is empty - it will throw an "unprocesssable" error (422)
+- Returns an object with keys: id, message and success:
+{
+  "id": 71, 
+  "message": "Question has been added", 
+  "success": 1
+}
+
+
+POST '/questions/search'
+- Gets a list of question based on a search term
+- If nothing is found - an empty list is returned
+- Returns an object with keys 'current_cateogry', list of 'questions', 'success' flag, 'total_questions' number:
+{ 
+  "current_category": 4, 
+  "questions": [
+    {
+      "answer": "Muhammad Ali", 
+      "category": 4, 
+      "difficulty": 1, 
+      "id": 9, 
+      "question": "What boxer's original name is Cassius Clay?"
+    }
+  ], 
+  "success": 1, 
+  "total_questions": 1
+}
+
+
+GET '/categories/<int:category_id>/questions'
+- Fetches questions from a specific category
+- If wrong category is passed it throws an "unprocessable" error (422)
+- Returns an object with keys: 'current_category', list of 'questions', 'success' flag, 'total_questions' number
+{
+  "current_category": 2, 
+  "questions": [
+    {
+      "answer": "Escher", 
+      "category": 2, 
+      "difficulty": 1, 
+      "id": 16, 
+      "question": "Which Dutch graphic artist-initials M C was a creator of optical illusions?"
+    }, 
+    {
+      "answer": "Mona Lisa", 
+      "category": 2, 
+      "difficulty": 3, 
+      "id": 17, 
+      "question": "La Giaconda is better known as what?"
+    }
+  ], 
+  "success": 1, 
+  "total_questions": 4
+}
+
+POST '/quizzes'
+- Fetches a question based on a category and previous list of questions from a request body
+- If category is not set it will throw an "unprocessable" error (422)
+- If category id = 0, it will get a random question from any category, except the questions that have been answered
+- Returns an object with keys: 'question' object, 'current_category' id, 'success' flag
+{
+  "current_category": "4", 
+  "question": {
+    "answer": "1990", 
+    "category": 4, 
+    "difficulty": 5, 
+    "id": 71, 
+    "question": "When were you born?"
+  }, 
+  "success": 1
+}
+
+
+Present error handlers: 404, 422, 400, 405 and 500
 ```
 
 
