@@ -77,7 +77,7 @@ class TriviaTestCase(unittest.TestCase):
             category=1000,
             difficulty=4
         )
-        res = self.client().patch('/questions', json=new_question.format())
+        res = self.client().post('/questions', json=new_question.format())
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 422)

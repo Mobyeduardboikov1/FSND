@@ -45,17 +45,16 @@ def create_app(test_config=None):
         end = start + QUESTIONS_PER_PAGE
         questions = [question.format()
                      for question in Question.query.order_by(Question.id).all()]
-        questions = questions[start:end]
         question_count = len(questions)
-
-        if (question_count == 0):
+        current_questions = questions[start:end]
+        if (len(current_questions) == 0):
             abort(422)
         categories = {}
         for category in Category.query.order_by(Category.id).all():
             categories[category.id] = category.type
         return jsonify({
             'success': 1,
-            'questions': questions[start:end],
+            'questions': current_questions,
             'categories': categories,
             'totalQuestions': question_count,
             'currentCategory': categories[1]
@@ -129,7 +128,7 @@ def create_app(test_config=None):
 
         questions = [
             question.format() for question in Question.query.filter_by(
-                category=category_id).order_by(
+                category=str(category_id)).order_by(
                 Question.id).all()]
         return jsonify({
             'questions': questions,
