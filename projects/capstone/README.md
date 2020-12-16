@@ -43,6 +43,12 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
+# Login data
+Casting assistant: casting-assistang-eduard@gmail11.com
+Casting director: casting-director-eduard@gmail11.com
+Executive producer: casting-executive-eduard@gmail11.com
+
+password for all users: @wsX#edC
 
 ```
 Endpoints
