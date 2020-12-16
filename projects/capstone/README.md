@@ -1,5 +1,6 @@
 # Casting Agency - Capstone project for Full Stack Web Developer at Udacity
 
+# URL where the application is hosted: https://castingcapstoneeduard.herokuapp.com/
 ## Summary
 This is the last, capstone project for Full Stack Web Developer. It is divided into frontend and backend.
 Frontend is using Auth0 based React boilerplate, and provides a way to communicate with APIs.
